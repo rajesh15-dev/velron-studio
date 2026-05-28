@@ -1,0 +1,43 @@
+@media(max-width:480px){
+
+  body{
+    padding-bottom:90px;
+  }
+
+  .navbar{
+    padding:18px 14px;
+  }
+
+  .reel-section{
+    padding:0 12px;
+  }
+
+  .reel-image{
+    height:470px;
+  }
+
+  .logo h1{
+    font-size:16px;
+  }
+
+  .product-info h4{
+    font-size:14px;
+  }
+
+  .menu-drawer{
+    width:86%;
+  }
+
+}
+
+
+
+@media(min-width:768px){
+
+  body{
+    max-width:430px;
+    margin:auto;
+    background:#f5f1ea;
+  }
+
+}

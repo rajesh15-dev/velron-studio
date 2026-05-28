@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>
+    VELRON STUDIO
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="./css/style.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./css/responsive.css"
+  >
+
+</head>
+
+<body>
+
+
+
+  <!-- PAGE LOADER -->
+
+  <div class="page-loader"></div>
+
+
+
+
+
+  <!-- MENU OVERLAY -->
+
+  <div class="menu-overlay"></div>
+
+
+
+
+
+  <!-- MENU DRAWER -->
+
+  <div class="menu-drawer">
+
+    <div class="menu-top">
+
+      <div class="logo">
+
+        <h1>
+          VELRON
+        </h1>
+
+        <span>
+          STUDIO
+        </span>
+
+      </div>
+
+
+
+      <button class="close-menu">
+        ✕
+      </button>
+
+    </div>
+
+
+
+
+
+    <!-- MENU LINKS -->
+
+    <div class="menu-links">
+
+      <a href="#top">
+        🏠 Home
+      </a>
+
+      <a href="#featuredLooks">
+        ✨ Featured Looks
+      </a>
+
+      <a href="#latestLooks">
+        🔥 Latest Reels
+      </a>
+
+      <a
+        href="https://www.instagram.com/velronstudio"
+        target="_blank"
+      >
+        📸 Instagram
+      </a>
+
+      <a href="#footerSection">
+        ℹ About
+      </a>
+
+    </div>
+
+
+
+
+
+    <!-- MENU FOOTER -->
+
+    <div class="menu-footer">
+
+      <p>
+        velronwear@gmail.com
+      </p>
+
+      <span>
+        Luxury Fashion Creator Platform
+      </span>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <!-- NAVBAR -->
+
+  <header
+    class="navbar"
+    id="top"
+  >
+
+    <button class="menu-btn">
+      ☰
+    </button>
+
+
+
+    <div class="logo">
+
+      <h1>
+        VELRON
+      </h1>
+
+      <span>
+        STUDIO
+      </span>
+
+    </div>
+
+
+
+    <button
+      class="save-btn"
+      onclick="window.scrollTo({
+        top:0,
+        behavior:'smooth'
+      })"
+    >
+      ↑
+    </button>
+
+  </header>
+
+
+
+
+
+  <!-- FEATURED HERO -->
+
+  <section
+    class="featured-hero"
+    id="featuredLooks"
+  >
+
+    <div class="featured-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200&auto=format&fit=crop"
+        alt=""
+      >
+
+
+
+      <div class="featured-overlay">
+
+        <div class="featured-content">
+
+          <span>
+            TRENDING LOOK
+          </span>
+
+          <h2>
+            Discover Luxury Fashion Reels
+          </h2>
+
+          <p>
+            Explore creator looks, shop products,
+            and discover premium outfits instantly.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <!-- HERO SEARCH -->
+
+  <section class="hero-section">
+
+    <div class="paste-box">
+
+      <input
+        type="text"
+        placeholder="Paste Instagram Reel Link..."
+        id="reelInput"
+      >
+
+
+
+      <button id="previewBtn">
+        →
+      </button>
+
+    </div>
+
+
+
+    <p class="hero-text">
+      Search creator reels and instantly open the look page
+    </p>
+
+  </section>
+
+
+
+
+
+  <!-- SECTION TITLE -->
+
+  <section
+    class="section-title-wrap"
+    id="latestLooks"
+  >
+
+    <div class="section-title-row">
+
+      <h2>
+        Latest Reels
+      </h2>
+
+
+
+      <span>
+        LIVE
+      </span>
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <!-- FEED SECTION -->
+
+  <section class="feed-section">
+
+    <div
+      id="feedContainer"
+      class="feed-container"
+    >
+
+
+
+      <!-- DYNAMIC REELS -->
+
+
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <!-- FOOTER -->
+
+  <footer
+    class="site-footer"
+    id="footerSection"
+  >
+
+    <div class="footer-top">
+
+      <div class="footer-logo">
+
+        <h2>
+          VELRON
+        </h2>
+
+        <span>
+          STUDIO
+        </span>
+
+      </div>
+
+
+
+      <p class="footer-description">
+
+        Premium creator platform for luxury fashion,
+        affiliate shopping, and modern outfit discovery.
+
+      </p>
+
+    </div>
+
+
+
+
+
+    <!-- FOOTER LINKS -->
+
+    <div class="footer-links">
+
+      <a href="#top">
+        Home
+      </a>
+
+      <a href="#featuredLooks">
+        Featured
+      </a>
+
+      <a href="#latestLooks">
+        Reels
+      </a>
+
+      <a
+        href="https://www.instagram.com/velronstudio"
+        target="_blank"
+      >
+        Instagram
+      </a>
+
+    </div>
+
+
+
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
+
+      <p>
+        © 2026 VELRON STUDIO
+      </p>
+
+      <span>
+        Designed for modern fashion creators
+      </span>
+
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- SCRIPTS -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+  <script src="./supabase/config.js"></script>
+
+  <script src="./js/app.js"></script>
+
+</body>
+
+</html>

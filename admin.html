@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    name="theme-color"
+    content="#111111"
+  />
+
+  <meta
+    name="description"
+    content="VELRON ADMIN luxury creator dashboard"
+  />
+
+  <title>
+    VELRON ADMIN
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="./css/style.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./css/responsive.css"
+  >
+
+</head>
+
+<body>
+
+
+
+  <!-- PAGE LOADER -->
+
+  <div class="page-loader"></div>
+
+
+
+
+
+  <!-- PROCESSING POPUP -->
+
+  <div
+    id="uploadPopup"
+    class="upload-popup"
+  >
+
+    <div class="upload-popup-card">
+
+      <div class="upload-loader"></div>
+
+      <h3 id="uploadStatusText">
+        Processing...
+      </h3>
+
+      <p>
+        Please wait while files upload
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <!-- EDIT POPUP -->
+
+  <div
+    id="editPopup"
+    class="edit-popup"
+  >
+
+    <div class="edit-popup-card">
+
+      <div class="edit-popup-top">
+
+        <h2>
+          Edit Reel
+        </h2>
+
+        <button id="closeEditPopup">
+          ✕
+        </button>
+
+      </div>
+
+
+
+
+
+      <!-- EDIT REEL URL -->
+
+      <div class="input-group">
+
+        <label>
+          Reel URL
+        </label>
+
+        <input
+          type="text"
+          id="editReelUrl"
+          placeholder="Update Reel URL"
+        >
+
+      </div>
+
+
+
+
+
+      <!-- EDIT PRODUCT LINK -->
+
+      <div class="input-group">
+
+        <label>
+          Product Link
+        </label>
+
+        <input
+          type="text"
+          id="editProductLink"
+          placeholder="Update Product Link"
+        >
+
+      </div>
+
+
+
+
+
+      <!-- UPDATE BUTTON -->
+
+      <button
+        id="updateReelBtn"
+        class="publish-btn"
+      >
+        Update Reel
+      </button>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <!-- MENU OVERLAY -->
+
+  <div class="menu-overlay"></div>
+
+
+
+
+
+  <!-- MENU DRAWER -->
+
+  <div class="menu-drawer">
+
+    <div class="menu-top">
+
+      <div class="logo">
+
+        <h1>
+          VELRON
+        </h1>
+
+        <span>
+          STUDIO
+        </span>
+
+      </div>
+
+
+
+      <button class="close-menu">
+        ✕
+      </button>
+
+    </div>
+
+
+
+
+
+    <!-- MENU LINKS -->
+
+    <div class="menu-links">
+
+      <a href="#">
+        🏠 Dashboard
+      </a>
+
+      <a href="#publishSection">
+        🚀 Publish Reel
+      </a>
+
+      <a href="#publishedSection">
+        🎬 Uploaded Reels
+      </a>
+
+      <a
+        href="https://www.instagram.com/velronstudio"
+        target="_blank"
+      >
+        📸 Instagram
+      </a>
+
+    </div>
+
+
+
+
+
+    <!-- MENU FOOTER -->
+
+    <div class="menu-footer">
+
+      <p>
+        velronwear@gmail.com
+      </p>
+
+      <span>
+        Premium Creator Dashboard
+      </span>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <!-- NAVBAR -->
+
+  <header class="navbar">
+
+    <button class="menu-btn">
+      ☰
+    </button>
+
+
+
+    <div class="logo">
+
+      <h1>
+        VELRON
+      </h1>
+
+      <span>
+        ADMIN
+      </span>
+
+    </div>
+
+
+
+    <button
+      class="save-btn"
+      onclick="window.scrollTo({
+        top:0,
+        behavior:'smooth'
+      })"
+    >
+      ↑
+    </button>
+
+  </header>
+
+
+
+
+
+  <!-- HERO TITLE -->
+
+  <section class="section-title-wrap">
+
+    <div class="section-title-row">
+
+      <h2>
+        Creator Dashboard
+      </h2>
+
+
+
+      <span>
+        LIVE
+      </span>
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <!-- ADMIN SECTION -->
+
+  <section
+    class="hero-section"
+    id="publishSection"
+  >
+
+    <div class="admin-card">
+
+
+
+      <!-- TITLE -->
+
+      <h2 class="admin-title">
+        Publish New Reel
+      </h2>
+
+
+
+
+
+      <!-- REEL URL -->
+
+      <div class="input-group">
+
+        <label>
+          Instagram Reel URL
+        </label>
+
+        <input
+          type="text"
+          id="adminReelUrl"
+          placeholder="Paste Reel URL"
+        >
+
+      </div>
+
+
+
+
+
+      <!-- REEL COVER -->
+
+      <div class="input-group">
+
+        <label>
+          Upload Reel Cover
+        </label>
+
+        <input
+          type="file"
+          id="reelCoverFile"
+          accept="image/*"
+        >
+
+      </div>
+
+
+
+
+
+      <!-- PRODUCTS -->
+
+      <div id="productsWrapper">
+
+
+
+        <!-- PRODUCT ITEM -->
+
+        <div class="product-upload-card">
+
+          <h3 class="product-upload-title">
+            Product 1
+          </h3>
+
+
+
+
+
+          <!-- PRODUCT TITLE -->
+
+          <div class="input-group">
+
+            <label>
+              Product Title
+            </label>
+
+            <input
+              type="text"
+              class="product-title"
+              placeholder="Enter Product Title"
+            >
+
+          </div>
+
+
+
+
+
+          <!-- PRODUCT LINK -->
+
+          <div class="input-group">
+
+            <label>
+              Product URL
+            </label>
+
+            <input
+              type="text"
+              class="product-link"
+              placeholder="Paste Product URL"
+            >
+
+          </div>
+
+
+
+
+
+          <!-- PRODUCT IMAGE -->
+
+          <div class="input-group">
+
+            <label>
+              Upload Product Image
+            </label>
+
+            <input
+              type="file"
+              class="product-image"
+              accept="image/*"
+            >
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+
+      <!-- ADD PRODUCT -->
+
+      <button
+        id="addProductBtn"
+        class="secondary-btn"
+      >
+        + Add Product
+      </button>
+
+
+
+
+
+      <!-- PUBLISH BUTTON -->
+
+      <button
+        id="publishBtn"
+        class="publish-btn"
+      >
+        Publish Reel
+      </button>
+
+
+
+
+
+      <!-- GENERATED LINK -->
+
+      <div class="generated-box">
+
+        <p>
+          Generated Public Link
+        </p>
+
+
+
+        <div class="generated-link-row">
+
+          <a
+            href="#"
+            id="generatedLink"
+            target="_blank"
+          >
+            Waiting...
+          </a>
+
+
+
+          <button id="copyBtn">
+            Copy
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <!-- PUBLISHED REELS -->
+
+  <section
+    class="published-section"
+    id="publishedSection"
+  >
+
+    <div class="published-header">
+
+      <h2 class="published-title">
+        Uploaded Reels
+      </h2>
+
+
+
+      <span class="live-badge">
+        LIVE
+      </span>
+
+    </div>
+
+
+
+
+
+    <!-- REELS GRID -->
+
+    <div
+      id="publishedReelsContainer"
+      class="published-grid"
+    >
+
+
+
+      <!-- DYNAMIC REELS -->
+
+
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <!-- FOOTER -->
+
+  <footer class="site-footer">
+
+    <div class="footer-top">
+
+      <div class="footer-logo">
+
+        <h2>
+          VELRON
+        </h2>
+
+        <span>
+          ADMIN PANEL
+        </span>
+
+      </div>
+
+
+
+      <p class="footer-description">
+
+        Manage luxury fashion reels,
+        affiliate products, creator uploads,
+        and premium shopping experiences.
+
+      </p>
+
+    </div>
+
+
+
+
+
+    <!-- FOOTER LINKS -->
+
+    <div class="footer-links">
+
+      <a href="#">
+        Dashboard
+      </a>
+
+      <a href="#publishSection">
+        Publish
+      </a>
+
+      <a href="#publishedSection">
+        Reels
+      </a>
+
+      <a
+        href="https://www.instagram.com/velronstudio"
+        target="_blank"
+      >
+        Instagram
+      </a>
+
+    </div>
+
+
+
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
+
+      <p>
+        © 2026 VELRON ADMIN
+      </p>
+
+      <span>
+        Designed for premium creators
+      </span>
+
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- SCRIPTS -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+  <script src="./supabase/config.js"></script>
+
+  <script src="./js/admin.js"></script>
+
+</body>
+
+</html>

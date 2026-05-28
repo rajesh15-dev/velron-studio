@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    VELRON LOOK
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="./css/style.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./css/responsive.css"
+  >
+
+</head>
+
+<body>
+
+
+  <!-- PAGE LOADER -->
+
+  <div class="page-loader"></div>
+
+
+
+  <!-- NAVBAR -->
+
+  <header class="navbar">
+
+    <button
+      onclick="history.back()"
+      class="menu-btn"
+    >
+      ←
+    </button>
+
+
+
+    <div class="logo">
+
+      <h1>
+        VELRON
+      </h1>
+
+      <span>
+        LOOK
+      </span>
+
+    </div>
+
+
+
+    <button class="save-btn">
+      ⌂
+    </button>
+
+  </header>
+
+
+
+
+
+  <!-- REEL SECTION -->
+
+  <section class="reel-section">
+
+    <div class="reel-card">
+
+
+
+      <!-- REEL IMAGE -->
+
+      <div class="reel-image">
+
+        <img
+          id="reelPreview"
+          src=""
+          alt=""
+        >
+
+
+
+        <button class="play-btn">
+          ▶
+        </button>
+
+      </div>
+
+
+
+
+
+      <!-- CONTENT -->
+
+      <div class="reel-content">
+
+        <h3>
+          SHOP THIS LOOK
+        </h3>
+
+
+
+
+
+        <!-- PRODUCTS WRAPPER -->
+
+        <div
+          id="productsContainer"
+          class="products-container"
+        >
+
+
+
+          <!-- DYNAMIC PRODUCTS -->
+
+
+
+        </div>
+
+
+
+
+
+        <!-- SAVE BUTTON -->
+
+        <button class="save-look-btn">
+          Save Fit
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <!-- MENU -->
+
+  <div class="menu-overlay"></div>
+
+  <div class="menu-drawer">
+
+    <div class="menu-top">
+
+      <div class="logo">
+
+        <h1>
+          VELRON
+        </h1>
+
+        <span>
+          STUDIO
+        </span>
+
+      </div>
+
+
+
+      <button class="close-menu">
+        ✕
+      </button>
+
+    </div>
+
+
+
+
+
+    <div class="menu-links">
+
+      <a href="#">
+        Home
+      </a>
+
+      <a href="#">
+        Looks
+      </a>
+
+      <a
+        href="https://www.instagram.com/velronstudio"
+        target="_blank"
+      >
+        Instagram
+      </a>
+
+    </div>
+
+
+
+
+
+    <div class="menu-footer">
+
+      <p>
+        velronwear@gmail.com
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <!-- SCRIPTS -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+  <script src="./supabase/config.js"></script>
+
+  <script src="./js/app.js"></script>
+
+</body>
+
+</html>
